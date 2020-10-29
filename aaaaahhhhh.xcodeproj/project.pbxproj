@@ -13,6 +13,7 @@
 		8C1029F0254AF48F0036848F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1029EE254AF48F0036848F /* Main.storyboard */; };
 		8C1029F2254AF4930036848F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C1029F1254AF4930036848F /* Assets.xcassets */; };
 		8C1029F5254AF4930036848F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C1029F3254AF4930036848F /* LaunchScreen.storyboard */; };
+		8C1029FF254AFB870036848F /* IRDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1029FE254AFB870036848F /* IRDBTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		8C1029F1254AF4930036848F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C1029F4254AF4930036848F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C1029F6254AF4930036848F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C1029FE254AFB870036848F /* IRDBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRDBTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				8C1029F1254AF4930036848F /* Assets.xcassets */,
 				8C1029F3254AF4930036848F /* LaunchScreen.storyboard */,
 				8C1029F6254AF4930036848F /* Info.plist */,
+				8C1029FE254AFB870036848F /* IRDBTableViewController.swift */,
 			);
 			path = aaaaahhhhh;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C1029FF254AFB870036848F /* IRDBTableViewController.swift in Sources */,
 				8C1029ED254AF48F0036848F /* ViewController.swift in Sources */,
 				8C1029E9254AF48F0036848F /* AppDelegate.swift in Sources */,
 				8C1029EB254AF48F0036848F /* SceneDelegate.swift in Sources */,
