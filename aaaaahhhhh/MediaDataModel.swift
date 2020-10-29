@@ -9,7 +9,7 @@ import UIKit
 
 class MediaDataModel: Codable {
 
-    var Franchise: [Franchise]
+    var franchise: [Franchise]
 }
 
 class Franchise:Codable {

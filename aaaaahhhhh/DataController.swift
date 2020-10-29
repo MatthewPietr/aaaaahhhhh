@@ -27,7 +27,7 @@ class DataController: NSObject {
                 let thisMediaData = try decoder.decode(MediaDataModel.self, from: thisData)
                 
                 self.dataModel = thisMediaData
-                print(thisMediaData)
+                print(thisMediaData.franchise[0].entries[0].summary)
             } catch let err {
                 print("ERROR WAS: ", err)
             }
