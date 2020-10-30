@@ -48,6 +48,11 @@ class DetailViewController: UIViewController {
             //URGENT GET IMAGE
             if let thisMediaImage = mediaImage {
                 //do thing
+                
+                let url = URL(string: entry.imageURL)
+                let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
+                thisMediaImage.image = UIImage(data: data!)
+                
             }
             
             if let thisTitleLabel = titleLabel {
@@ -56,7 +61,20 @@ class DetailViewController: UIViewController {
             }
             if let thisYearLabel = yearLabel {
                 //ADD IN EXTRA IF THERE IS ANY
-                thisYearLabel.text = entry.yearStart
+                if(entry.yearEnd == nil) {
+                    thisYearLabel.text = entry.yearStart
+                    
+                }else if(entry.yearEnd == " - ")
+                {
+                    thisYearLabel.text = entry.yearStart
+                    thisYearLabel.text! += " - "
+                }
+                else {
+                    thisYearLabel.text = entry.yearStart
+                    thisYearLabel.text! += " - "
+                    thisYearLabel.text! += entry.yearEnd!
+                }
+                
             }
             
             if let thisFormatLabel = formatLabel {
