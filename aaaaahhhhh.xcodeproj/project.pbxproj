@@ -16,6 +16,7 @@
 		8C1029FF254AFB870036848F /* IRDBTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C1029FE254AFB870036848F /* IRDBTableViewController.swift */; };
 		8C102A02254B11EF0036848F /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C102A01254B11EF0036848F /* DataController.swift */; };
 		8C102A05254B12090036848F /* MediaDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C102A04254B12090036848F /* MediaDataModel.swift */; };
+		8C948EB3254B9FC2006DC1C4 /* CastTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C948EB2254B9FC2006DC1C4 /* CastTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		8C1029FE254AFB870036848F /* IRDBTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IRDBTableViewController.swift; sourceTree = "<group>"; };
 		8C102A01254B11EF0036848F /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		8C102A04254B12090036848F /* MediaDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaDataModel.swift; sourceTree = "<group>"; };
+		8C948EB2254B9FC2006DC1C4 /* CastTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				8C1029FE254AFB870036848F /* IRDBTableViewController.swift */,
 				8C102A01254B11EF0036848F /* DataController.swift */,
 				8C102A04254B12090036848F /* MediaDataModel.swift */,
+				8C948EB2254B9FC2006DC1C4 /* CastTableViewController.swift */,
 			);
 			path = aaaaahhhhh;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			files = (
 				8C102A02254B11EF0036848F /* DataController.swift in Sources */,
 				8C1029FF254AFB870036848F /* IRDBTableViewController.swift in Sources */,
+				8C948EB3254B9FC2006DC1C4 /* CastTableViewController.swift in Sources */,
 				8C102A05254B12090036848F /* MediaDataModel.swift in Sources */,
 				8C1029ED254AF48F0036848F /* DetailViewController.swift in Sources */,
 				8C1029E9254AF48F0036848F /* AppDelegate.swift in Sources */,
