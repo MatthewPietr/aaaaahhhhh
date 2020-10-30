@@ -31,7 +31,7 @@ class CastTableViewController: UITableViewController {
         // Configure the cell...
         
         //CAST LIST
-        cell.textLabel?.text = (castListArray?[indexPath.row].actorName)
+        cell.textLabel?.text = "\(castListArray?[indexPath.row].actorName ?? "") as"
         
         cell.detailTextLabel?.text = castListArray?[indexPath.row].role
 
