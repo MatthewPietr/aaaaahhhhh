@@ -33,7 +33,7 @@ class DetailViewController: UIViewController {
         let nav = self.navigationController?.navigationBar
         
         nav?.barStyle = UIBarStyle.black
-        nav?.tintColor = UIColor.init(red:245/255, green: 196/255, blue: 72/255, alpha: 1)
+        nav?.tintColor = UIColor.init(red:0/255, green: 196/255, blue: 30/255, alpha: 1)
         title = detailItem?.gameName
         
         configureView()
