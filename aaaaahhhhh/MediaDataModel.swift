@@ -9,29 +9,28 @@ import UIKit
 
 class MediaDataModel: Codable {
 
-    var franchise: [Franchise]
+    var console: [Console]
 }
 
-class Franchise:Codable {
-    let franchiseName: String
-    let entries: [Entry]
+class Console:Codable {
+    let consoleName: String
+    let games: [Game]
 }
 
-class Entry:Codable {
-    let name:String
-    let format:String
-    let yearStart:String
-    let yearEnd:String?
-    let episodes: Int?
-    let studio: String?
-    let network: String?
-    let imageURL: String
-    let description: String
-    let summary: String
-    let starring: [Cast]
+class Game:Codable {
+    let gameName:String
+    let type:String
+    let yearShown:String
+    let yearReleased:String?
+    let howLongToBeatInHrs: Int?
+    let gameStudio: String?
+    let URLForImage: String
+    let descriptionForGame: String
+    let summaryForGame: String
+    let voiceActors: [VoiceAct]
 }
 
-class Cast:Codable {
-    let actorName: String
-    let role: String
+class VoiceAct:Codable {
+    let voiceActorName: String
+    let personVoiced: String
 }

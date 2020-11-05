@@ -20,7 +20,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var summaryTextView: UITextView!
     
-    var detailItem: Entry? {
+    var detailItem: Game? {
         didSet {
             configureView()
         }
@@ -34,7 +34,7 @@ class DetailViewController: UIViewController {
         
         nav?.barStyle = UIBarStyle.black
         nav?.tintColor = UIColor.init(red:245/255, green: 196/255, blue: 72/255, alpha: 1)
-        title = detailItem?.name
+        title = detailItem?.gameName
         
         configureView()
     }
@@ -49,48 +49,48 @@ class DetailViewController: UIViewController {
             if let thisMediaImage = mediaImage {
                 //do thing
                 
-                let url = URL(string: entry.imageURL)
+                let url = URL(string: entry.URLForImage)
                 let data = try? Data(contentsOf: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check / try-catch
                 thisMediaImage.image = UIImage(data: data!)
                 
             }
             
             if let thisTitleLabel = titleLabel {
-                thisTitleLabel.text = entry.name
+                thisTitleLabel.text = entry.gameName
                 
             }
             if let thisYearLabel = yearLabel {
                 //ADD IN EXTRA IF THERE IS ANY
-                if(entry.yearEnd == nil) {
-                    thisYearLabel.text = entry.yearStart
+                if(entry.yearReleased == nil) {
+                    thisYearLabel.text = entry.yearShown
                     
-                }else if(entry.yearEnd == " - ")
+                }else if(entry.yearReleased == " - ")
                 {
-                    thisYearLabel.text = entry.yearStart
+                    thisYearLabel.text = entry.yearShown
                     thisYearLabel.text! += " - "
                 }
                 else {
-                    thisYearLabel.text = entry.yearStart
+                    thisYearLabel.text = entry.yearShown
                     thisYearLabel.text! += " - "
-                    thisYearLabel.text! += entry.yearEnd!
+                    thisYearLabel.text! += entry.yearReleased!
                 }
                 
             }
             
             if let thisFormatLabel = formatLabel {
-                thisFormatLabel.text = entry.format
+                thisFormatLabel.text = entry.type
             }
             
             if let thisEpisodeLabel = episodeLabel {
                 
-                if let episodeCount = entry.episodes {
+                if let episodeCount = entry.howLongToBeatInHrs {
                     if(episodeCount == 1)
                     {
-                        thisEpisodeLabel.text = "\(episodeCount) Episode"
+                        thisEpisodeLabel.text = "\(episodeCount) Hour"
                         
                     }
                     else{
-                        thisEpisodeLabel.text = "\(episodeCount) Episodes"
+                        thisEpisodeLabel.text = "\(episodeCount) Hours"
                         
                     }
                     
@@ -100,16 +100,16 @@ class DetailViewController: UIViewController {
             }
             
             if let thisStudioLabel = studioLabel {
-                thisStudioLabel.text = entry.studio
+                thisStudioLabel.text = entry.gameStudio
             }
             
             //bottomview
             if let thisDescriptionLabel = descriptionLabel {
-                thisDescriptionLabel.text = entry.description
+                thisDescriptionLabel.text = entry.descriptionForGame
             }
             
             if let thisSummaryTextView = summaryTextView {
-                thisSummaryTextView.text = entry.summary
+                thisSummaryTextView.text = entry.summaryForGame
             }
         }
     }
@@ -124,7 +124,7 @@ class DetailViewController: UIViewController {
         if segue.identifier == "showCastList" {
 
             let controller = segue.destination as! CastTableViewController
-            controller.castListArray = detailItem?.starring
+            controller.castListArray = detailItem?.voiceActors
                 
             
         }

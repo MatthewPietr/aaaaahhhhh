@@ -24,7 +24,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="230" id="4ij-2R-b2V"/>
                                         </constraints>
-                                        <state key="normal" title="Cast List"/>
+                                        <state key="normal" title="Voice Actors"/>
                                         <connections>
                                             <segue destination="kTr-aV-eyO" kind="show" identifier="showCastList" id="bsJ-UM-bex"/>
                                         </connections>

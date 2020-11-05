@@ -9,7 +9,7 @@ import UIKit
 
 class DataController: NSObject {
 
-    let JSONURL = "https://api.jsonbin.io/b/5eb061a247a2266b1472bcf9/1"
+    let JSONURL = "https://api.jsonbin.io/b/5fa3983247077d298f5d3fd2"
     
     var dataModel: MediaDataModel?
     
@@ -27,7 +27,7 @@ class DataController: NSObject {
                 let thisMediaData = try decoder.decode(MediaDataModel.self, from: thisData)
                 
                 self.dataModel = thisMediaData
-                print(thisMediaData.franchise[0].entries[0].summary)
+                print(thisMediaData.console[0].games[0].summaryForGame)
             } catch let err {
                 print("ERROR WAS: ", err)
             }

@@ -26,7 +26,7 @@ class IRDBTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "IRDB"
+        title = "GAMING"
         
         
         
@@ -42,7 +42,7 @@ class IRDBTableViewController: UITableViewController {
         imageView.contentMode = .scaleAspectFit
           
         // 4
-        let image = UIImage(named: "irdblogo")
+        let image = UIImage(named: "Unknown")
         imageView.image = image
           
         // 5
@@ -61,17 +61,17 @@ class IRDBTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return mediaModel?.franchise.count ?? 0
+        return mediaModel?.console.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return mediaModel?.franchise[section].entries.count ?? 0
+        return mediaModel?.console[section].games.count ?? 0
 
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return mediaModel?.franchise[section].franchiseName
+        return mediaModel?.console[section].consoleName
     }
 
     
@@ -80,9 +80,9 @@ class IRDBTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        cell.textLabel?.text = mediaModel?.franchise[indexPath.section].entries[indexPath.row].name
+        cell.textLabel?.text = mediaModel?.console[indexPath.section].games[indexPath.row].gameName
         
-        cell.detailTextLabel?.text = mediaModel?.franchise[indexPath.section].entries[indexPath.row].yearStart
+        cell.detailTextLabel?.text = mediaModel?.console[indexPath.section].games[indexPath.row].yearShown
         
         return cell
     }
@@ -97,7 +97,7 @@ class IRDBTableViewController: UITableViewController {
         
         if segue.identifier == "showMediaDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let selectedObject = mediaModel!.franchise[indexPath.section].entries[indexPath.row]
+                let selectedObject = mediaModel!.console[indexPath.section].games[indexPath.row]
                 let controller = segue.destination as! DetailViewController
                 controller.detailItem = selectedObject
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
