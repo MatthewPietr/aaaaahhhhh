@@ -9,7 +9,7 @@ import UIKit
 
 class CastTableViewController: UITableViewController {
 
-    var castListArray: [VoiceAct]?
+    var listArray: [VoiceAct]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class CastTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return castListArray?.count ?? 0
+        return listArray?.count ?? 0
     }
 
     
@@ -31,9 +31,9 @@ class CastTableViewController: UITableViewController {
         // Configure the cell...
         
         //CAST LIST
-        cell.textLabel?.text = "\(castListArray?[indexPath.row].voiceActorName ?? "") as"
+        cell.textLabel?.text = "\(listArray?[indexPath.row].voiceActorName ?? "") as"
         
-        cell.detailTextLabel?.text = castListArray?[indexPath.row].personVoiced
+        cell.detailTextLabel?.text = listArray?[indexPath.row].personVoiced
 
         return cell
     }

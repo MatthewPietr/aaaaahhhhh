@@ -124,7 +124,7 @@ class DetailViewController: UIViewController {
         if segue.identifier == "showCastList" {
 
             let controller = segue.destination as! CastTableViewController
-            controller.castListArray = detailItem?.voiceActors
+            controller.listArray = detailItem?.voiceActors
                 
             
         }
